@@ -1,0 +1,47 @@
+Q1)
+<!doctype>
+<html>
+<head>
+	<style type="text/css">
+	h3
+	{
+	font-size:20pt;
+	}
+	fieldset
+	{
+	background-color:yellow;
+	}
+	h4
+	{
+	color:blue;
+	}
+	</style>
+</head>
+
+<body>
+
+<form>
+<fieldset>
+
+<h3> <font color="red"> Operating System Information</font></h3>
+<h4>
+	Enter your Name <input type="text" name="t1"><br><br>
+	Password<input type="password" name="t2"><br><br>
+
+	Which of the following Operating System have you used <br><br>
+	<input type="checkbox" name=c1>Linux
+	<input type="checkbox" name=c2>Windows 10
+	<input type="checkbox" name=c3>Macintosh 8.0<br><br>
+
+	Which of the Operating System do you like the best?<br><br>
+	<input type="radio" name=r1>Linux
+	<input type="radio" name=r1>windows 10
+	<input type="radio" name=r1>Macintosh 8.0<br><br>
+
+	you have completed the form<br>
+	<input type="submit" value="submit"><br>
+	<input type="reset" value="reset"><br>
+</h4>
+</fielldset>
+</form>
+</html>

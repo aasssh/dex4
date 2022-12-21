@@ -1,0 +1,41 @@
+<?php
+$highTemp=array(68,70,72,58,60,30,55,90,98,56,74,76,80,45,36,67,78,76,77,97,86,88,74,54,66,77,93,76,87,81);
+$cnt=count($highTemp);
+echo"no.of temperature you have take is {$cnt}<br>";
+$total=0;
+foreach($highTemp as $h)
+{
+        $total=$total+$h;
+}
+echo"Total of all temperatures is : $total\n";
+
+//built in function to calculate the total
+$total=array_sum($highTemp);
+echo"<br> Total of the temperature using built in function is : $total";
+
+//caluculate average
+$avg=$total/$cnt;
+echo"<br>Average is $avg";
+
+//sort the temp and get the top and bottom five
+//use rsort() for descending order.
+
+rsort($highTemp);
+
+//to get only top 5 temp
+
+$topTemp=array_slice($highTemp,0,5);
+echo"<p>The warmest five high temperature were\n";
+foreach($topTemp as $high)
+{
+        echo"$high&deg;F\n";
+}
+
+//to get bottom five temperature
+$bottomTemp=array_slice($highTemp,-5,5);
+echo"<p>The coolest five high temperatures are\n";
+foreach($bottomTemp as $low)
+{
+        echo"$low&deg;F\n";
+}
+?>

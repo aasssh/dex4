@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head> <font color="purple" ><b> List of Indian States with thier capital </b></font> </head>
+<body bgcolor="aqua">
+<font color="red">
+<ol><li>Delhi</li>
+<ul> <li>NewDelhi</li></ul>
+<li> Haryana </li>
+<ul> <li>Chandigarh</li></ul>
+<li>Gujrat</li>
+<ul> <li>Gandhinagar</li></ul>
+<li>Rajasthan</li>
+<ul> <li>Jaipur</li></ul>
+<li>Maharashtra</li>
+<ul> <li>Mumbai</li></ul>
+<li>Uttarpradesh</li>
+<ul> <li>Lucknow</li></ul>
+</font>
+</ol>
+</body>
+</html>

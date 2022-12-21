@@ -1,0 +1,22 @@
+Code :
+tem.txt:
+shital arun khatte
+from tybsc(cs)
+2019-2022
+
+PHP:
+<?php
+$fn="tem.txt";
+$file=fopen($fn,"r");
+
+if($file==false)
+{
+        echo("Error in opening file");
+        exit();
+}
+$filesize=filesize($fn);
+$filetext=fread($file,$filesize);
+fclose($file);
+echo("File size : $filesize bytes");
+echo("<p> $filetext</p>");
+?>

@@ -1,0 +1,35 @@
+<!doctype>
+<html>
+<head>
+<style type="text/css">
+div
+{
+background-color:Red;
+width:300px;
+border:50px solid green;
+padding:50px;
+margin:20px;
+border-style:dashed;
+}
+
+li
+{ 
+color:black;
+background-color:white;
+margin:12px 12px 12px 12px;
+padding:12px 0px 12px 12px;
+list-style:none;
+border-color:blue;
+border-style:dashed;
+}
+</style>
+</head>
+<body>
+<h1> Demonstrating the Box Model</h1>
+<div>
+<b><I><li>T.Y.Bsc(CS)
+<li>Academic year 2021-22
+</b></I>
+</div>
+</body>
+</html>

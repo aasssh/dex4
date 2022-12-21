@@ -1,0 +1,61 @@
+<html>
+        <head>
+                exercise 3 B 1
+        </head>
+        <body>
+                <form action="b1.php" method="get">
+                        enter the first string : <input type="text" name="large"><br>
+                        enter the second string : <input type="text" name="small"><br>
+
+                        Please select the choice<br>
+                        <input type="radio" name="op" value="1">To check small string appears at the start of large string<br>
+                        <input type="radio" name="op" value="2">
+                        to Find position of a small string in a large string <br>
+                        <input type="radio" name="op" value="3"> To compare both the string for first n characters(comparing in the case insensetive)<br>
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+                </form>
+        </body>
+</html>
+--------------_
+PHP CODE :
+<?php
+$s1=$_GET['large'];
+$s2=$_GET['small'];
+$op=$_GET['op'];
+switch($op)
+{
+case 1:
+        if(stripos($s1,$s2)===0)
+        {
+                echo "The string $s1 is starts with the $s2 string";
+        }
+        else
+        {
+                echo"the string $s1 is not starting with the $s2  String";
+        }
+        break;
+
+case 2:$pos=strpos($s1,$s2);
+        if($pos===false)
+        {
+                echo " String $s2 is not present in $s1<br>";
+        }
+        else
+        {
+                echo " String $s2 is present in $s1 at the position $pos <br>";
+        }
+        break;
+
+case 3:$ans=strncasecmp($s2,$s1,3);
+        if($ans==0)
+        {
+                echo "the $s1 and $s2 has first 3 letters are same <br>";
+        }
+        else
+        {
+                echo " the $s1 and $s2 does not have the first 3 letters same ";
+        }
+        break;
+}
+?>

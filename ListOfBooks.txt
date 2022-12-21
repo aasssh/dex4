@@ -1,0 +1,30 @@
+<!doctype>
+<html>
+<head><font color="purple" size=10>List of books</font></head>
+<body bgcolor="aqua">
+<font size=10>
+<table border=5>
+<tr>
+<th rowspan=2 > Item No</th>
+<th rowspan=2> Item Name</th>
+<th colspan=2> Prize</th>
+</tr>
+<tr>
+<td> Rs.</td>
+<td> Paise</td>
+</tr>
+<tr>
+<td>1</td>
+<td> Programming in Python</td>
+<td>500</td>
+<td>50</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Programming in Java</td>
+<td>345</td>
+<td>00</td>
+</tr>
+</font>
+</table>
+</html>

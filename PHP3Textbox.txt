@@ -1,0 +1,34 @@
+<html>
+        <head>
+                <title> Student's Message</title>
+        </head>
+        <body>
+                <form method="get" action="b3.php">
+                        enter name<input type="text" name="snm"><br>
+                        enter college name<input type="text" name="clnm"><br>
+                        enter message<input type="text"name="msg"><br>
+                        <input type="submit" value="submit">
+                        <input type="reset" value="reset">
+                </form>
+        </body>
+</html>
+------_
+PHP  
+
+<?php
+$snm=$_GET['snm'];
+$msg=$_GET['msg'];
+$clnm=$_GET['clnm'];
+
+function message($snm,$clnm,$msg)
+{
+        return "$snm have sent messsage from  $clnm as $msg";
+}
+echo "with all 3 arguments";
+echo"<br>";
+echo message($snm,$clnm,$msg);
+echo"<br>";
+echo"with 1 missing argument";
+echo"<br>";
+echo message($snm,$msg);
+?>

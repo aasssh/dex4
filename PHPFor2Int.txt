@@ -1,0 +1,55 @@
+<html>
+        <head>
+                <operations by using different function>
+        </head>
+        <body>
+         <form action="aa1.php" method="get">
+         Enter the first number <input type="text" name="n1" > <br>
+         Enter the second number <input type="text" name="n2"> <br>
+       <input type="radio" name="op" value="mod">mod of the two numbers<br>
+       <input type="radio" name="op" value="power">power of number 1 to the number 2<br>
+      <input type="radio" name="op" value="sum">sum of the first n1 numbers <br>
+      <input type="radio" name="op" value="fact">Factorial of the second number <br>
+      <input type="submit" value="submit"><br>
+      <input type="reset" value="reset"><br>
+</form></body></html>
+-------------_
+PHP CODE:
+<?php
+$n1=$_GET['n1'];
+$n2=$_GET['n2'];
+$op=$_GET['op'];
+function mod($n1,$n2)
+{
+        $n3=$n1%$n2;
+        return $n3;
+}
+function power($n1,$n2)
+{
+        $res=pow($n1,$n2);
+        return $res;
+}
+function sum($n1)
+{
+        $sum=0;
+        for($i=0;$i<=$n1;$i++)        {
+                $sum=$sum+$i;
+        }
+        return $sum;
+}
+function fact($n2)
+{
+        $f=1;
+        for($i=1;$i<=$n2;$i++)
+        $f=$f*$i;
+        return $f;
+}
+if($op=="mod")
+        echo "mod of the two numbers are = ".$op($n1,$n2);
+if($op=='power')
+        echo "power of first number $n1 raise to $n2 is:".$op($n1,$n2);
+if($op=="sum")
+      echo "sum of the first $n1 numbers is:".$op($n1);
+if($op=="fact")
+         echo "factorial of the second number $n2 is :". $op($n2);
+?>

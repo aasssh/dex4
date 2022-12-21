@@ -1,0 +1,20 @@
+<?php
+$original=array('1','2','3','4','5');
+echo"the Original array is :<br>";
+foreach($original as $arr)
+{
+        echo "$arr<br>";
+}
+
+echo" Displaying array elements by using an a print_r() function<br>";
+print_r($original);
+
+//Array splice(array(original array),start(index of the array),length(for replacement),array(new element to be insert))
+$ad='shital';
+array_splice($original,3,0,$ad);
+echo"<br> After inserting a new element shital in the array is <br>";
+foreach($original as $arr)
+{
+        echo"$arr<br>";
+}
+?>

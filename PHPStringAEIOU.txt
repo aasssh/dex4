@@ -1,0 +1,92 @@
+<html>
+        <head>EXercise no 3 set B</head>
+        <body>
+        <form action="a2.php"  method="get">
+        Enter the input string :<input type="text" name="txt1"><br>
+        <input type="radio" name="op" value="callength">
+        calculate length of a string without using inbuild function<br>
+        <input type="radio" name="op" value="count1">
+         Count the total number of vowels<br>
+         <input type="radio" name="op" value="convert">
+         Conver the given string and lower case and the titlecase<br>
+         <input type="radio" name="op" value="pad">
+         Pad String from left and right side <br>
+         <input type="radio" name="op" value="rev">
+         Reverse input String<br>
+         <input type="radio" name="op" value="rmv">
+         remove the leading whitespaces from string<br>
+         <input type="submit" value="submit">
+         <input type="reset" value="reset">
+         </form></body></html>
+---------------_
+INC CODE:
+<?php
+function callength($txt1)
+{
+        $len=0;
+        for($i=0;$txt1[$i]!=NULL;$i++)
+        {
+                $len++;
+        }
+        return $len;
+}
+
+function count1($txt1)
+{
+        $ct=0;
+        for($i=0;$txt1[$i]!=NULL;$i++)
+        {
+                if($txt1[$i]=='a'||$txt1[$i]=='A'||
+                $txt1[$i]=='e'||$txt1[$i]=='E'||
+                $txt1[$i]=='i'||$txt1[$i]=='I'||
+                $txt1[$i]=='o'||$txt1[$i]=='O'||
+                $txt1[$i]=='u'||$txt1[$i]=='U')
+                {
+                $ct++;
+                }
+        }
+        return $ct;
+}
+function convert($txt1)
+{
+        echo "converting String to lowercase : ".strtolower($txt1);
+        echo "<br>converting String to titlecase : ".ucwords($txt1);
+}
+function pad($txt1)
+{
+        echo " padding string with * from left and right side :".str_pad($txt1,20,"*",STR_PAD_BOTH);
+}
+function rev($txt1)
+{
+        echo "Reverse of the given string :",strrev($txt1);
+}
+function rmv()
+{
+        $str="Hellow World";
+        echo"Without trim :".$str;
+        echo"<br>";
+        echo"with rtrim:".rtrim($str,"rld");
+        echo"<br>";
+        echo"with ltrim:".ltrim($str,"He");
+}
+?>
+------------------_
+PHP CODE :
+<?php
+include "a2.inc";
+$txt1=$_GET['txt1'];
+$op=$_GET['op'];
+$str=$_GET['str'];
+if($op=='callength')
+        echo "length of the given String is :".$op($txt1);
+if($op=='count1')
+        echo "total number of vowels in  the given String is :".$op($txt1);
+if($op=='convert')
+        echo $op($txt1);
+if($op=='pad')
+        echo $op($txt1);
+if($op=='rev')
+        echo $op($txt1);
+if($op=='rmv')
+        echo $op($txt1);
+?>

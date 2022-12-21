@@ -1,0 +1,116 @@
+<html>
+        <head>
+                <title> Set A2</title>
+        </head>
+        <body>
+                <form method="get" action="seta2.php">
+                ***************MENU***************
+                <br>
+                <input type="radio" name="op" value="a">
+                1.Insert an Element in Stack<br>
+
+                <input type="radio" name="op" value="b">
+                2.Delete an Element from Stack<br>
+
+                <input type="radio" name="op" value="c">
+                3.Display Elements in Stack<br>
+
+                <input type="radio" name="op" value="d">
+                4.Insert an Element in queue<br>
+
+                <input type="radio" name="op" value="e">
+                5.Delete an Element from queue<br>
+
+                <input type="radio" name="op" value="f">
+                6.display content from a queue<br>
+
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+                </form>
+        </body>
+</html>
+___________-
+PHP:
+<?php
+$op=$_GET['op'];
+$arr=array("shital","sayali","shubhada","shantanu","sanket","yash");
+switch($op)
+{
+case 'a':
+        echo"you have selected the array push operation using stack<br>";
+        echo"Array elements before push is :<br>";
+        foreach($arr as $a)
+        {
+                echo"$a<br>";
+        }
+        array_push($arr,"anisha","amol");
+        echo"<br>Array elements after doing push operation is :<br>";
+        foreach($arr as $a)
+        {
+                echo"$a<br>";
+        }
+        break;
+
+case 'b':
+        echo"you have selected the array pop operation using stack<br>";
+        echo"Array elements before pop is :<br>";
+        foreach($arr as $a)
+        {
+                echo"$a<br>";                                                           }
+        array_pop($arr);
+        echo"<br>Array elements after doing pop operation is :<br>";
+        foreach($arr as $a)
+        {
+              echo"$a<br>";
+        }
+        break;
+    case 'c':
+        echo"you have selected the display stack elements operation :<br>";
+        echo"Array elements are :<br>";
+        foreach($arr as $a)
+        {
+                echo"$a<br>";
+        }
+        break;
+
+case 'd':
+        echo"you have selected the unshift operation using queue<br>";
+        echo"Array elements before unshift is :<br>";
+        foreach($arr as $a)
+        {
+                echo"$a<br>";
+        }
+        array_unshift($arr,"anisha","amol");
+        echo"<br>Array elements after doing unshift operation is :<br>";
+        foreach($arr as $a)
+        {
+                echo"$a<br>";
+        }
+        break;
+case 'e':
+        echo"you have selected the array shift operation using queue<br>";
+        echo"Array elements before shift is :<br>";
+        foreach($arr as $a)
+        {
+                echo"$a<br>";
+        }
+        array_shift($arr);
+        echo"<br>Array elements after doing shift operation is :<br>";
+        foreach($arr as $a)
+        {
+                echo"$a<br>";
+        }
+        break;
+case 'f':
+        echo"you have selected the display queue elements operation :<br>";
+        echo"Array elements are :<br>";
+        foreach($arr as $a)
+        {
+                echo"$a<br>";
+        }
+        break;
+
+case 'default':
+        echo"<br> Please select operation to perform";
+}
+?>
